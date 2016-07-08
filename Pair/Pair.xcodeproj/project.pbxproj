@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		756CC48A1D2FFB6B0048F1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4891D2FFB6B0048F1BE /* AppDelegate.swift */; };
-		756CC48C1D2FFB6B0048F1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC48B1D2FFB6B0048F1BE /* ViewController.swift */; };
 		756CC48F1D2FFB6B0048F1BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756CC48D1D2FFB6B0048F1BE /* Main.storyboard */; };
 		756CC4911D2FFB6B0048F1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756CC4901D2FFB6B0048F1BE /* Assets.xcassets */; };
 		756CC4941D2FFB6B0048F1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756CC4921D2FFB6B0048F1BE /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		756CC4B91D2FFBAE0048F1BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4B71D2FFBAE0048F1BE /* Model.xcdatamodeld */; };
 		756CC4BC1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BA1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift */; };
 		756CC4BD1D2FFC860048F1BE /* ItemToRandomize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BB1D2FFC860048F1BE /* ItemToRandomize.swift */; };
+		756CC4C01D2FFF150048F1BE /* RandomItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		756CC4861D2FFB6B0048F1BE /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		756CC4891D2FFB6B0048F1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		756CC48B1D2FFB6B0048F1BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		756CC48E1D2FFB6B0048F1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		756CC4901D2FFB6B0048F1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756CC4931D2FFB6B0048F1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		756CC4B81D2FFBAE0048F1BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		756CC4BA1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemToRandomize+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		756CC4BB1D2FFC860048F1BE /* ItemToRandomize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemToRandomize.swift; sourceTree = "<group>"; };
+		756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomItemListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				756CC4891D2FFB6B0048F1BE /* AppDelegate.swift */,
-				756CC48B1D2FFB6B0048F1BE /* ViewController.swift */,
 				756CC48D1D2FFB6B0048F1BE /* Main.storyboard */,
+				756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */,
 				756CC4B71D2FFBAE0048F1BE /* Model.xcdatamodeld */,
 				756CC4901D2FFB6B0048F1BE /* Assets.xcassets */,
 				756CC4921D2FFB6B0048F1BE /* LaunchScreen.storyboard */,
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756CC48C1D2FFB6B0048F1BE /* ViewController.swift in Sources */,
+				756CC4C01D2FFF150048F1BE /* RandomItemListTableViewController.swift in Sources */,
 				756CC4BC1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift in Sources */,
 				756CC48A1D2FFB6B0048F1BE /* AppDelegate.swift in Sources */,
 				756CC4B91D2FFBAE0048F1BE /* Model.xcdatamodeld in Sources */,
