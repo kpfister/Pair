@@ -17,9 +17,14 @@ class PersonController {
     var people = [Person]()
     
     init() {
-        // Load
+        loadFromPersistenStorage()
     }
-    
+    func createPerson(name: String) {
+        let person = Person(name:name)
+        people.append(person)
+        saveToPersistentStorage()
+        
+    }
     func addPerson(person: Person) {
         guard let indexOfPerson = people.indexOf(person) else {
             return
@@ -40,4 +45,16 @@ class PersonController {
     }
     
 
+}
+
+extension Array
+{
+    /** Randomizes the order of an array's elements. */
+    mutating func shuffle()
+    {
+        for _ in 0..<10
+        {
+            sortInPlace { (_,_) in arc4random() < arc4random() }
+        }
+    }
 }

@@ -23,6 +23,9 @@
                                         <rect key="frame" x="259" y="7" width="82" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Randomizer"/>
+                                        <connections>
+                                            <action selector="RandomizeItemsButtonTapped:" destination="kdv-VM-dVC" eventType="touchUpInside" id="0rY-X0-rr8"/>
+                                        </connections>
                                     </button>
                                 </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="PBa-bg-uPp"/>
@@ -35,19 +38,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Km-uj-Shd" id="gpQ-ge-MXw">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOo-Bd-VNv">
-                                            <rect key="frame" x="279" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="SOo-Bd-VNv" secondAttribute="trailing" constant="279" id="2fB-jW-dQi"/>
-                                        <constraint firstItem="SOo-Bd-VNv" firstAttribute="top" secondItem="gpQ-ge-MXw" secondAttribute="top" constant="11" id="Zs3-N8-6SG"/>
-                                        <constraint firstItem="SOo-Bd-VNv" firstAttribute="leading" secondItem="gpQ-ge-MXw" secondAttribute="leading" constant="279" id="qkU-10-8W4"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -68,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNr-hM-Awp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="314"/>
+            <point key="canvasLocation" x="840" y="314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZiM-hB-akZ">

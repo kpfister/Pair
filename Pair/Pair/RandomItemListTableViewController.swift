@@ -9,36 +9,33 @@
 import UIKit
 
 class RandomItemListTableViewController: UITableViewController, UITextFieldDelegate {
+    
 
     @IBAction func AddItemButtonTapped(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Add new Item", message: "What re we randomizing today?", preferredStyle: .Alert)
+        var personTextField: UITextField?
+        let alertController = UIAlertController(title: "Add new Item", message: "Add names", preferredStyle: .Alert)
         alertController.addTextFieldWithConfigurationHandler { (textField:UITextField) -> Void in
+            personTextField = textField
+            textField.placeholder = "Full name"
             textField.autocorrectionType = .Yes
             textField.delegate = self
         }
+        let addAction = UIAlertAction(title: "Add", style: .Default) { (_) in
+            guard let name = personTextField?.text else { return }
+            PersonController.sharedInstance.createPerson(name)
+            self.tableView.reloadData()
+        }
+        alertController.addAction(addAction)
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
         
-    }
+        self.presentViewController(alertController, animated: true, completion: nil)
+            }
     
     @IBAction func RandomizeItemsButtonTapped(sender: AnyObject) {
-        
-        var array = []
-        /*
-         func shuffleArray<T>(array: Array<T>) -> Array<T>
-         {
-         for var index = array.count - 1; index > 0; index--
-         {
-         // Random int from 0 to index-1
-         var j = Int(arc4random_uniform(UInt32(index-1)))
-         
-         // Swap two array elements
-         // Notice '&' required as swap uses 'inout' parameters
-         swap(&array[index], &array[j])
-         }
-         return array
-         }*/
-        
-    }
+        PersonController.sharedInstance.people.shuffle()
+          }
     
     
     override func viewDidLoad() {
@@ -65,7 +62,7 @@ class RandomItemListTableViewController: UITableViewController, UITextFieldDeleg
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PersonController.sharedInstance.people.count ?? 0
+        return 2
     }
 
     
