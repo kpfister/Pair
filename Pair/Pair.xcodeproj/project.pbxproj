@@ -13,10 +13,9 @@
 		756CC4941D2FFB6B0048F1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756CC4921D2FFB6B0048F1BE /* LaunchScreen.storyboard */; };
 		756CC49F1D2FFB6B0048F1BE /* PairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC49E1D2FFB6B0048F1BE /* PairTests.swift */; };
 		756CC4AA1D2FFB6B0048F1BE /* PairUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4A91D2FFB6B0048F1BE /* PairUITests.swift */; };
-		756CC4B91D2FFBAE0048F1BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4B71D2FFBAE0048F1BE /* Model.xcdatamodeld */; };
-		756CC4BC1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BA1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift */; };
-		756CC4BD1D2FFC860048F1BE /* ItemToRandomize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BB1D2FFC860048F1BE /* ItemToRandomize.swift */; };
 		756CC4C01D2FFF150048F1BE /* RandomItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */; };
+		756CC4C21D300B330048F1BE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4C11D300B330048F1BE /* Person.swift */; };
+		756CC4C51D300E4A0048F1BE /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CC4C41D300E4A0048F1BE /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +48,9 @@
 		756CC4A51D2FFB6B0048F1BE /* PairUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PairUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		756CC4A91D2FFB6B0048F1BE /* PairUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairUITests.swift; sourceTree = "<group>"; };
 		756CC4AB1D2FFB6B0048F1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		756CC4B81D2FFBAE0048F1BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		756CC4BA1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemToRandomize+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		756CC4BB1D2FFC860048F1BE /* ItemToRandomize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemToRandomize.swift; sourceTree = "<group>"; };
 		756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomItemListTableViewController.swift; sourceTree = "<group>"; };
+		756CC4C11D300B330048F1BE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		756CC4C41D300E4A0048F1BE /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +81,8 @@
 		756CC47D1D2FFB6B0048F1BE = {
 			isa = PBXGroup;
 			children = (
+				756CC4C61D30121E0048F1BE /* ViewControllers */,
+				756CC4C31D300B3F0048F1BE /* Model */,
 				756CC4BE1D2FFC8B0048F1BE /* Model Controllers */,
 				756CC4881D2FFB6B0048F1BE /* Pair */,
 				756CC49D1D2FFB6B0048F1BE /* PairTests */,
@@ -106,8 +106,6 @@
 			children = (
 				756CC4891D2FFB6B0048F1BE /* AppDelegate.swift */,
 				756CC48D1D2FFB6B0048F1BE /* Main.storyboard */,
-				756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */,
-				756CC4B71D2FFBAE0048F1BE /* Model.xcdatamodeld */,
 				756CC4901D2FFB6B0048F1BE /* Assets.xcassets */,
 				756CC4921D2FFB6B0048F1BE /* LaunchScreen.storyboard */,
 				756CC4951D2FFB6B0048F1BE /* Info.plist */,
@@ -136,10 +134,26 @@
 		756CC4BE1D2FFC8B0048F1BE /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				756CC4BA1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift */,
-				756CC4BB1D2FFC860048F1BE /* ItemToRandomize.swift */,
+				756CC4C41D300E4A0048F1BE /* PersonController.swift */,
 			);
 			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		756CC4C31D300B3F0048F1BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				756CC4C11D300B330048F1BE /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		756CC4C61D30121E0048F1BE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				756CC4BF1D2FFF150048F1BE /* RandomItemListTableViewController.swift */,
+			);
+			name = ViewControllers;
+			path = Pair;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,11 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756CC4C51D300E4A0048F1BE /* PersonController.swift in Sources */,
+				756CC4C21D300B330048F1BE /* Person.swift in Sources */,
 				756CC4C01D2FFF150048F1BE /* RandomItemListTableViewController.swift in Sources */,
-				756CC4BC1D2FFC860048F1BE /* ItemToRandomize+CoreDataProperties.swift in Sources */,
 				756CC48A1D2FFB6B0048F1BE /* AppDelegate.swift in Sources */,
-				756CC4B91D2FFBAE0048F1BE /* Model.xcdatamodeld in Sources */,
-				756CC4BD1D2FFC860048F1BE /* ItemToRandomize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,19 +535,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		756CC4B71D2FFBAE0048F1BE /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				756CC4B81D2FFBAE0048F1BE /* Model.xcdatamodel */,
-			);
-			currentVersion = 756CC4B81D2FFBAE0048F1BE /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 756CC47E1D2FFB6B0048F1BE /* Project object */;
 }

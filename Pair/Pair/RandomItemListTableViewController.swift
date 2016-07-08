@@ -21,17 +21,30 @@ class RandomItemListTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     @IBAction func RandomizeItemsButtonTapped(sender: AnyObject) {
+        
+        var array = []
+        /*
+         func shuffleArray<T>(array: Array<T>) -> Array<T>
+         {
+         for var index = array.count - 1; index > 0; index--
+         {
+         // Random int from 0 to index-1
+         var j = Int(arc4random_uniform(UInt32(index-1)))
+         
+         // Swap two array elements
+         // Notice '&' required as swap uses 'inout' parameters
+         swap(&array[index], &array[j])
+         }
+         return array
+         }*/
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,23 +56,28 @@ class RandomItemListTableViewController: UITableViewController, UITextFieldDeleg
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 4
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         return "Group \(section + 1)"
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return PersonController.sharedInstance.people.count ?? 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("peopleTableViewCell", forIndexPath: indexPath)
+        let person = PersonController.sharedInstance.people[indexPath.row]
+        cell.textLabel?.text = person.name
 
-        // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
